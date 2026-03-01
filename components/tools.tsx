@@ -1,9 +1,15 @@
 "use client";
 
+import { useRef } from "react";
 import { useLanguage } from "@/lib/language-context";
+import { motion, useInView } from "framer-motion";
+
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export function Tools() {
   const { t } = useLanguage();
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   const tools = [
     {
@@ -51,11 +57,16 @@ export function Tools() {
   ];
 
   return (
-    <section id="tools" className="px-6 py-16 md:py-24">
-      <div className="mx-auto max-w-6xl">
+    <section id="tools" className="px-6 py-12 md:py-24" ref={ref}>
+      <div className="mx-auto max-w-7xl">
         <div className="grid gap-4 md:grid-cols-12">
           {/* Title area */}
-          <div className="rounded-3xl bg-card p-8 shadow-sm md:col-span-5 md:p-10">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            animate={inView ? { opacity: 1, x: 0 } : {}}
+            transition={{ duration: 1, ease }}
+            className="rounded-3xl bg-card p-8 shadow-sm md:col-span-5 md:p-10"
+          >
             <span className="inline-block rounded-full bg-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent">
               {t("tools.tag")}
             </span>
@@ -65,13 +76,16 @@ export function Tools() {
             <p className="mt-3 text-sm leading-relaxed text-muted-foreground md:text-base">
               {t("tools.description")}
             </p>
-          </div>
+          </motion.div>
 
           {/* Stats card */}
           <div className="grid grid-cols-2 gap-4 md:col-span-7">
-            {stats.map((stat) => (
-              <div
+            {stats.map((stat, i) => (
+              <motion.div
                 key={stat.label}
+                initial={{ opacity: 0, y: 40 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.2 + i * 0.15, duration: 0.9, ease }}
                 className="flex flex-col items-center justify-center rounded-3xl bg-card p-6 shadow-sm"
               >
                 <p className="text-3xl font-extrabold tracking-tight text-foreground md:text-4xl">
@@ -80,7 +94,7 @@ export function Tools() {
                 <p className="mt-1 text-xs text-muted-foreground text-center">
                   {stat.label}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -88,8 +102,12 @@ export function Tools() {
         {/* Tool cards */}
         <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {tools.map((tool, i) => (
-            <div
+            <motion.div
               key={tool.name}
+              initial={{ opacity: 0, y: 50 }}
+              animate={inView ? { opacity: 1, y: 0 } : {}}
+              transition={{ delay: 0.5 + i * 0.12, duration: 0.9, ease }}
+              whileHover={{ y: -4 }}
               className={`rounded-3xl p-7 shadow-sm transition-all ${
                 i === 0
                   ? "bg-primary text-primary-foreground"
@@ -123,7 +141,7 @@ export function Tools() {
               >
                 {tool.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

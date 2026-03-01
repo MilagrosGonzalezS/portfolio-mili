@@ -2,6 +2,7 @@
 
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { useLanguage } from "@/lib/language-context";
+import { motion } from "framer-motion";
 
 const countries = [
   { flag: "🇦🇷", name: "Argentina" },
@@ -11,29 +12,56 @@ const countries = [
   { flag: "🇨🇦", name: "Canada" },
 ];
 
+const ease = [0.22, 1, 0.36, 1] as const;
+
 export function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative px-6 pt-24 pb-8">
-      <div className="mx-auto max-w-6xl">
+    <section className="relative px-6 pt-20 md:pt-44 pb-8">
+      <div className="mx-auto max-w-7xl">
         <div className="grid gap-4 md:grid-cols-12 md:grid-rows-[auto_auto_auto]">
           {/* Main hero card */}
-          <div className="flex flex-col justify-between rounded-3xl bg-accent p-8 md:col-span-7 md:row-span-3 md:p-12">
+          <motion.div
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease }}
+            className="flex flex-col justify-between rounded-3xl bg-accent p-8 md:col-span-7 md:row-span-3 md:p-12"
+          >
             <div>
-              <span className="inline-block rounded-full bg-accent-foreground/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent-foreground">
+              <motion.span
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.5, duration: 0.8, ease }}
+                className="inline-block rounded-full bg-accent-foreground/15 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-accent-foreground"
+              >
                 {t("hero.tag")}
-              </span>
-              <h1 className="mt-6 font-serif text-4xl leading-[1.05] tracking-tight text-accent-foreground md:text-5xl lg:text-6xl">
+              </motion.span>
+              <motion.h1
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 1.2, ease }}
+                className="mt-6 font-serif text-4xl leading-[1.05] tracking-tight text-accent-foreground md:text-5xl lg:text-6xl"
+              >
                 Milagros
                 <br />
                 Gonzalez
-              </h1>
-              <p className="mt-5 max-w-md text-base leading-relaxed text-accent-foreground/70 md:text-lg">
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.0, duration: 1, ease }}
+                className="mt-5 max-w-md text-base leading-relaxed text-accent-foreground/70 md:text-lg"
+              >
                 {t("hero.description")}
-              </p>
+              </motion.p>
             </div>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.3, duration: 0.8, ease }}
+              className="mt-8 flex flex-wrap gap-3"
+            >
               <a
                 href="#work"
                 className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:opacity-90"
@@ -47,11 +75,16 @@ export function Hero() {
               >
                 {t("hero.getInTouch")}
               </a>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Location card */}
-          <div className="flex items-center gap-3 rounded-3xl bg-card p-6 shadow-sm md:col-span-5">
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.5, duration: 1, ease }}
+            className="flex items-center gap-3 rounded-3xl bg-card p-6 shadow-sm md:col-span-5"
+          >
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-accent/10">
               <MapPin size={18} className="text-accent" />
             </div>
@@ -63,25 +96,35 @@ export function Hero() {
                 {t("hero.location")}
               </p>
             </div>
-          </div>
+          </motion.div>
 
-          {/* Countries card — visual globe + flag pills */}
-          <div className="flex flex-col items-center justify-center rounded-3xl bg-card p-6 shadow-sm md:col-span-5 md:row-span-2">
+          {/* Countries card */}
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.8, duration: 1, ease }}
+            className="flex flex-col items-center justify-center rounded-3xl bg-card p-6 shadow-sm md:col-span-5 md:row-span-2"
+          >
             <p className="mb-5 font-serif text-2xl text-center text-foreground">
               {t("hero.countries")}
             </p>
-            <div className="flex flex-wrap justify-center gap-2.5">
-              {countries.map((c) => (
-                <span
+            <div className="flex flex-wrap max-w-sm justify-center gap-2.5">
+              {countries.map((c, i) => (
+                <motion.span
                   key={c.name}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ delay: 1.1 + i * 0.15, duration: 0.6, ease }}
                   className="inline-flex items-center gap-2 rounded-full bg-secondary px-4 py-2.5 transition-colors hover:bg-accent/10"
                 >
                   <span className="text-2xl leading-none">{c.flag}</span>
-                  <span className="text-sm font-medium text-foreground">{c.name}</span>
-                </span>
+                  <span className="text-sm font-medium text-foreground">
+                    {c.name}
+                  </span>
+                </motion.span>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
