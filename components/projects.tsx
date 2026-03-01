@@ -22,166 +22,54 @@ interface Project {
 }
 
 const projects: Project[] = [
-  {
-    name: "JET",
-    url: "https://jet.com.ar/",
-    category: "corporate",
-    thumbnail: "/thumbnails/jet.png",
-  },
-  {
-    name: "CLO",
-    url: "https://clo.com.ar/",
-    category: "corporate",
-    thumbnail: "/thumbnails/clo.png",
-  },
-  {
-    name: "Event Trend",
-    url: "https://event-trend.com/",
-    category: "corporate",
-    thumbnail: "/thumbnails/event-trend.png",
-  },
-  {
-    name: "Central de Carnes",
-    url: "https://centraldecarnes.com.ar/",
-    category: "corporate",
-    thumbnail: "/thumbnails/central-de-carnes.png",
-  },
-  {
-    name: "Media Lima",
-    url: "https://agenciamedialima.com/",
-    category: "corporate",
-    thumbnail: "/thumbnails/media-lima.png",
-  },
-  {
-    name: "iServe",
-    url: "https://www.iserveoffices.com/",
-    category: "corporate",
-    thumbnail: "/thumbnails/iserve.png",
-  },
-  {
-    name: "Cannizzo",
-    url: "https://cannizzoconstrucciones.com/",
-    category: "corporate",
-    thumbnail: "/thumbnails/cannizzo.png",
-  },
-  {
-    name: "Ecominera",
-    url: "https://www.ecominera.com.ar/",
-    category: "corporate",
-    thumbnail: "/thumbnails/ecominera.png",
-  },
-  {
-    name: "Startap",
-    url: "https://startap.com.ar/",
-    category: "corporate",
-    thumbnail: "/thumbnails/startap.png",
-  },
-  {
-    name: "Headroom",
-    url: "https://headroom.com.ar/",
-    category: "corporate",
-    thumbnail: "/thumbnails/headroom.png",
-  },
-  {
-    name: "LegalDirect",
-    url: "https://legaldirect.ca/",
-    category: "corporate",
-    thumbnail: "/thumbnails/legaldirect.png",
-  },
-  {
-    name: "Summa Sports",
-    url: "https://sportsumma.com/",
-    category: "sports",
-    thumbnail: "/thumbnails/summa-sports.png",
-  },
-  {
-    name: "Cracks",
-    url: "https://cracksgroup.com/",
-    category: "sports",
-    thumbnail: "/thumbnails/cracks.png",
-  },
-  {
-    name: "El Faro",
-    url: "https://elfaroarg.com/",
-    category: "sports",
-    thumbnail: "/thumbnails/el-faro.png",
-  },
-  {
-    name: "Sofi Carmona",
-    url: "https://soficarmona.com.ar/",
-    category: "health",
-    thumbnail: "/thumbnails/sofi-carmona.png",
-  },
-  {
-    name: "Wuman",
-    url: "https://wuman.com.ar/",
-    category: "health",
-    thumbnail: "/thumbnails/wuman.png",
-  },
-  {
-    name: "Portfolio Juli",
-    url: "https://julietalopez.com.ar/",
-    category: "artistic",
-    thumbnail: "/thumbnails/portfolio-juli.png",
-  },
-  {
-    name: "Nina Vais",
-    url: "https://www.ninavais.com/",
-    category: "artistic",
-    thumbnail: "/thumbnails/nina-vais.png",
-  },
-  {
-    name: "Milauti",
-    url: "https://www.milauti.com.ar",
-    category: "weddings",
-    thumbnail: "/thumbnails/milauti.png",
-  },
-  {
-    name: "Candiego",
-    url: "https://lagala-candeydiego.com.ar",
-    category: "weddings",
-    thumbnail: "/thumbnails/candiego.png",
-  },
-  {
-    name: "Kate y Tute",
-    url: "https://kateytute.com.ar",
-    category: "weddings",
-    thumbnail: "/thumbnails/kate-y-tute.png",
-  },
-  {
-    name: "Amarelo",
-    url: "https://amarelocreativestudio.com.ar",
-    category: "entrepreneur",
-    thumbnail: "/thumbnails/amarelo.png",
-  },
-  {
-    name: "Macana",
-    url: "https://parrillasmacana.com",
-    category: "entrepreneur",
-    thumbnail: "/thumbnails/macana.png",
-  },
-  {
-    name: "Concepto Fusion",
-    url: "https://conceptofusion.com.ar/",
-    category: "entrepreneur",
-    thumbnail: "/thumbnails/concepto-fusion.png",
-  },
-  {
-    name: "Chim & Churri",
-    url: "https://www.chimandchurri.com/",
-    category: "entrepreneur",
-    thumbnail: "/thumbnails/chim-and-churri.png",
-  },
+  // Entrepreneur
+  { name: "Amarelo", url: "https://amarelocreativestudio.com.ar", category: "entrepreneur", thumbnail: "/thumbnails/amarelo.png" },
+  { name: "Macana", url: "https://parrillasmacana.com", category: "entrepreneur", thumbnail: "/thumbnails/macana.png" },
+  { name: "Concepto Fusion", url: "https://conceptofusion.com.ar/", category: "entrepreneur", thumbnail: "/thumbnails/concepto-fusion.png" },
+  { name: "Chim & Churri", url: "https://www.chimandchurri.com/", category: "entrepreneur", thumbnail: "/thumbnails/chim-and-churri.png" },
+  // Sports
+  { name: "Summa Sports", url: "https://sportsumma.com/", category: "sports", thumbnail: "/thumbnails/summa-sports.png" },
+  { name: "Cracks", url: "https://cracksgroup.com/", category: "sports", thumbnail: "/thumbnails/cracks.png" },
+  { name: "El Faro", url: "https://elfaroarg.com/", category: "sports", thumbnail: "/thumbnails/el-faro.png" },
+  // Health
+  { name: "Sofi Carmona", url: "https://soficarmona.com.ar/", category: "health", thumbnail: "/thumbnails/sofi-carmona.png" },
+  { name: "Wuman", url: "https://wuman.com.ar/", category: "health", thumbnail: "/thumbnails/wuman.png" },
+  // Weddings
+  { name: "Milauti", url: "https://www.milauti.com.ar", category: "weddings", thumbnail: "/thumbnails/milauti.png" },
+  { name: "Cande y Diego", url: "https://lagala-candeydiego.com.ar", category: "weddings", thumbnail: "/thumbnails/candiego.png" },
+  { name: "Kate y Tute", url: "https://kateytute.com.ar", category: "weddings", thumbnail: "/thumbnails/kate-y-tute.png" },
+  // Artistic
+  { name: "Julieta Lopez", url: "https://julietalopez.com.ar/", category: "artistic", thumbnail: "/thumbnails/portfolio-juli.png" },
+  { name: "Nina Vais", url: "https://www.ninavais.com/", category: "artistic", thumbnail: "/thumbnails/nina-vais.png" },
+  // Corporate
+  { name: "Thermotec", url: "https://www.thermotecuk.com/", category: "corporate", thumbnail: "/thumbnails/thermotec.png" },
+  { name: "LegalDirect", url: "https://legaldirect.ca/", category: "corporate", thumbnail: "/thumbnails/legaldirect.png" },
+  { name: "Headroom", url: "https://headroom.com.ar/", category: "corporate", thumbnail: "/thumbnails/headroom.png" },
+  { name: "Startap", url: "https://startap.com.ar/", category: "corporate", thumbnail: "/thumbnails/startap.png" },
+  { name: "Ecominera", url: "https://www.ecominera.com.ar/", category: "corporate", thumbnail: "/thumbnails/ecominera.png" },
+  { name: "Cannizzo", url: "https://cannizzoconstrucciones.com/", category: "corporate", thumbnail: "/thumbnails/cannizzo.png" },
+  { name: "iServe", url: "https://www.iserveoffices.com/", category: "corporate", thumbnail: "/thumbnails/iserve.png" },
+  { name: "Media Lima", url: "https://agenciamedialima.com/", category: "corporate", thumbnail: "/thumbnails/media-lima.png" },
+  { name: "Central de Carnes", url: "https://centraldecarnes.com.ar/", category: "corporate", thumbnail: "/thumbnails/central-de-carnes.png" },
+  { name: "Event Trend", url: "https://event-trend.com/", category: "corporate", thumbnail: "/thumbnails/event-trend.png" },
+  { name: "CLO", url: "https://clo.com.ar/", category: "corporate", thumbnail: "/thumbnails/clo.png" },
+  { name: "JET", url: "https://jet.com.ar/", category: "corporate", thumbnail: "/thumbnails/jet.png" },
+];
+
+const featuredNames = ["Amarelo", "Summa Sports", "LegalDirect", "Wuman", "Julieta Lopez", "Milauti"];
+const allProjects = [
+  ...featuredNames.map((name) => projects.find((p) => p.name === name)!),
+  ...projects.filter((p) => !featuredNames.includes(p.name)),
 ];
 
 const categoryKeys: CategoryKey[] = [
   "all",
-  "corporate",
+  "entrepreneur",
   "sports",
   "health",
-  "artistic",
   "weddings",
-  "entrepreneur",
+  "artistic",
+  "corporate",
 ];
 
 const categoryColorMap: Record<Exclude<CategoryKey, "all">, string> = {
@@ -198,7 +86,7 @@ export function Projects() {
   const { t } = useLanguage();
 
   const filtered =
-    active === "all" ? projects : projects.filter((p) => p.category === active);
+    active === "all" ? allProjects : projects.filter((p) => p.category === active);
 
   const getCategoryLabel = (key: CategoryKey) => t(`projects.${key}`);
 

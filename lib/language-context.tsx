@@ -21,12 +21,14 @@ const translations: Record<Lang, Record<string, string>> = {
 
     // Hero
     "hero.tag": "Web Developer",
-    "hero.location": "Based in Buenos Aires, working worldwide",
+    "hero.location": "Based in Buenos Aires, Argentina",
     "hero.description":
       "I design and build beautiful, functional websites for brands across every industry — from code-based solutions to no-code platforms.",
     "hero.viewWork": "View My Work",
     "hero.getInTouch": "Get in Touch",
     "hero.scroll": "Scroll",
+    "hero.countries": "Working worldwide",
+    "hero.countriesList": "Argentina, USA, Spain, UK, Canada",
 
     // About
     "about.tag": "About",
@@ -81,6 +83,10 @@ const translations: Record<Lang, Record<string, string>> = {
     "tools.cms": "CMS",
     "tools.nocode": "No-Code",
     "tools.ecommerce": "E-commerce",
+    "tools.more.name": "& More",
+    "tools.more.desc":
+      "Custom solutions tailored to your project's unique needs",
+    "tools.more.type": "Flexible",
     "tools.stat1.number": "25+",
     "tools.stat1.label": "Projects Delivered",
     "tools.stat2.number": "6",
@@ -110,12 +116,14 @@ const translations: Record<Lang, Record<string, string>> = {
 
     // Hero
     "hero.tag": "Desarrolladora Web",
-    "hero.location": "Desde Buenos Aires, trabajando para todo el mundo",
+    "hero.location": "Desde Buenos Aires, Argentina",
     "hero.description":
-      "Diseno y construyo sitios web atractivosy funcionales para marcas de diferentes rubros — desde soluciones con código hasta plataformas no-code.",
+      "Diseño y construyo sitios web atractivos y funcionales para marcas de diferentes rubros — desde soluciones con código hasta plataformas no-code.",
     "hero.viewWork": "Ver Mis Trabajos",
     "hero.getInTouch": "Contactame",
     "hero.scroll": "Explorar",
+    "hero.countries": "Trabajando en todo el mundo",
+    "hero.countriesList": "Argentina, USA, España, Reino Unido, Canada",
 
     // About
     "about.tag": "Sobre Mí",
@@ -123,7 +131,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "about.p1":
       "Soy Milagros Gonzalez, desarrolladora web con base en Buenos Aires, Argentina. Me apasiona transformar ideas en sitios web atractivos y de alto rendimiento. Ya sea una solución con código en Next.js o un sitio cuidadosamente diseñado en WordPress, Wix o Squarespace, adapto cada proyecto a las necesidades únicas de la marca.",
     "about.p2":
-      "Desde sitios corporativos hasta páginas de bodas, marcas deportivas y portfolios artísticos — trabajé en diversas industrias, entregando diseños que son tanto modernos como funcionales. Trabajo con clientes de todo el mundo.",
+      "Desde sitios corporativos hasta páginas de casamientos, marcas deportivas y portfolios artísticos — trabajé en diversas industrias, entregando diseños que son tanto modernos como funcionales. Trabajo con clientes de todo el mundo.",
     "about.highlight1.title": "Código",
     "about.highlight1.desc":
       "Construyendo sitios web personalizados y de alto rendimiento con Next.js y tecnologías web modernas.",
@@ -171,6 +179,10 @@ const translations: Record<Lang, Record<string, string>> = {
     "tools.cms": "CMS",
     "tools.nocode": "No-Code",
     "tools.ecommerce": "E-commerce",
+    "tools.more.name": "& Más",
+    "tools.more.desc":
+      "Soluciones a medida para las necesidades unicas de tu proyecto",
+    "tools.more.type": "Flexible",
     "tools.stat1.number": "25+",
     "tools.stat1.label": "Proyectos Entregados",
     "tools.stat2.number": "6",

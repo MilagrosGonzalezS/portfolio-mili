@@ -36,6 +36,11 @@ export function Tools() {
       description: t("tools.tiendanube.desc"),
       type: t("tools.ecommerce"),
     },
+    {
+      name: t("tools.more.name"),
+      description: t("tools.more.desc"),
+      type: t("tools.more.type"),
+    },
   ];
 
   const stats = [
@@ -81,14 +86,16 @@ export function Tools() {
         </div>
 
         {/* Tool cards */}
-        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {tools.map((tool, i) => (
             <div
               key={tool.name}
               className={`rounded-3xl p-7 shadow-sm transition-all ${
                 i === 0
                   ? "bg-primary text-primary-foreground"
-                  : "bg-card hover:bg-secondary"
+                  : i === tools.length - 1
+                    ? "bg-card hover:bg-secondary sm:col-span-2 lg:col-span-2"
+                    : "bg-card hover:bg-secondary"
               }`}
             >
               <span
