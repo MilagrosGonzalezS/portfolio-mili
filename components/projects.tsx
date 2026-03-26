@@ -191,6 +191,12 @@ const projects: Project[] = [
     category: "corporate",
     thumbnail: "/thumbnails/jet.png",
   },
+  {
+    name: "JB Brokers",
+    url: "https://brokersjb.com",
+    category: "corporate",
+    thumbnail: "/thumbnails/jb-brokers.png",
+  },
 ];
 
 const featuredNames = [
