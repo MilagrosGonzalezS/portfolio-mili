@@ -31,6 +31,12 @@ const projects: Project[] = [
     thumbnail: "/thumbnails/amarelo.png",
   },
   {
+    name: "Sports Performance Hub",
+    url: "https://sperformancehub.com",
+    category: "sports",
+    thumbnail: "/thumbnails/sph.png",
+  },
+  {
     name: "Macana",
     url: "https://parrillasmacana.com",
     category: "entrepreneur",
