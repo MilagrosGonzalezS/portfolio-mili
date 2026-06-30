@@ -92,6 +92,12 @@ const projects: Project[] = [
     category: "health",
     thumbnail: "/thumbnails/wuman.png",
   },
+  {
+    name: "Victoria Studio",
+    url: "https://victoriastudio.es/",
+    category: "health",
+    thumbnail: "/thumbnails/victoriastudio.png",
+  },
   // Weddings
   {
     name: "Milauti",
