@@ -107,7 +107,7 @@ export function Contact() {
               className="flex flex-col justify-center rounded-3xl bg-accent p-6"
             >
               <p className="text-2xl font-extrabold text-accent-foreground sm:text-3xl">
-                25+
+                30+
               </p>
               <p className="mt-1 text-xs text-accent-foreground/70 sm:text-sm">
                 {t("tools.stat1.label")}

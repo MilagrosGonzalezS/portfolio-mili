@@ -209,19 +209,50 @@ const projects: Project[] = [
     category: "corporate",
     thumbnail: "/thumbnails/jb-brokers.png",
   },
+  {
+    name: "Onward Dance Camp",
+    url: "https://onwarddancecamp.com",
+    category: "entrepreneur",
+    thumbnail: "/thumbnails/onward.png",
+  },
+  {
+    name: "Hybrid Garage Gym",
+    url: "https://hybridgaragegym.com",
+    category: "sports",
+    thumbnail: "/thumbnails/hgg.png",
+  },
+  {
+    name: "BSC",
+    url: "https://bsc-three-red.vercel.app/",
+    category: "corporate",
+    thumbnail: "/thumbnails/bsc.png",
+  },
+  {
+    name: "Parkline",
+    url: "https://parkline-psi.vercel.app/",
+    category: "corporate",
+    thumbnail: "/thumbnails/parkline.png",
+  },
 ];
 
 const featuredNames = [
   "Amarelo",
-  "Summa Sports",
+  "Sports Performance Hub",
   "LegalDirect",
   "Wuman",
   "Julieta Lopez",
   "Milauti",
 ];
+const priorityNames = [
+  ...featuredNames,
+  "Onward Dance Camp",
+  "Hybrid Garage Gym",
+  "BSC",
+  "Parkline",
+];
 const allProjects = [
-  ...featuredNames.map((name) => projects.find((p) => p.name === name)!),
-  ...projects.filter((p) => !featuredNames.includes(p.name)),
+  ...priorityNames.map((name) => projects.find((p) => p.name === name)!),
+  ...projects.filter((p) => !priorityNames.includes(p.name)),
 ];
 
 const categoryKeys: CategoryKey[] = [

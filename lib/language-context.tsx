@@ -87,7 +87,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "tools.more.desc":
       "Custom solutions tailored to your project's unique needs",
     "tools.more.type": "Flexible",
-    "tools.stat1.number": "25+",
+    "tools.stat1.number": "30+",
     "tools.stat1.label": "Projects Delivered",
     "tools.stat2.number": "6",
     "tools.stat2.label": "Industries Served",
@@ -183,7 +183,7 @@ const translations: Record<Lang, Record<string, string>> = {
     "tools.more.desc":
       "Soluciones a medida para las necesidades unicas de tu proyecto",
     "tools.more.type": "Flexible",
-    "tools.stat1.number": "25+",
+    "tools.stat1.number": "30+",
     "tools.stat1.label": "Proyectos Entregados",
     "tools.stat2.number": "6",
     "tools.stat2.label": "Rubros Abarcados",
