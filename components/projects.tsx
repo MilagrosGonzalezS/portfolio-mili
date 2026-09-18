@@ -111,18 +111,19 @@ const projects: Project[] = [
     category: "weddings",
     thumbnail: "/thumbnails/kate-y-tute.png",
   },
-  {
-    name: "Pocho y Mori",
-    url: "https://pochoymori.com.ar",
-    category: "weddings",
-    thumbnail: "/thumbnails/pochoymori.png",
-  },
-  {
-    name: "Delfi y Lucho",
-    url: "https://delfiylucho.com.ar",
-    category: "weddings",
-    thumbnail: "/thumbnails/delfiylucho.png",
-  },
+  // Hidden for now
+  // {
+  //   name: "Pocho y Mori",
+  //   url: "https://pochoymori.com.ar",
+  //   category: "weddings",
+  //   thumbnail: "/thumbnails/pochoymori.png",
+  // },
+  // {
+  //   name: "Delfi y Lucho",
+  //   url: "https://delfiylucho.com.ar",
+  //   category: "weddings",
+  //   thumbnail: "/thumbnails/delfiylucho.png",
+  // },
   // Artistic
   {
     name: "Julieta Lopez",
@@ -255,8 +256,6 @@ const priorityNames = [
   "Hybrid Garage Gym",
   "BSC",
   "Parkline",
-  "Pocho y Mori",
-  "Delfi y Lucho",
   "AB Arquitectura",
 ];
 const allProjects = [
