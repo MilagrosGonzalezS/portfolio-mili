@@ -43,12 +43,6 @@ const projects: Project[] = [
     thumbnail: "/thumbnails/macana.png",
   },
   {
-    name: "Concepto Fusion",
-    url: "https://conceptofusion.com.ar/",
-    category: "entrepreneur",
-    thumbnail: "/thumbnails/concepto-fusion.png",
-  },
-  {
     name: "Chim & Churri",
     url: "https://www.chimandchurri.com/",
     category: "entrepreneur",
@@ -72,12 +66,6 @@ const projects: Project[] = [
     url: "https://sportsumma.com/",
     category: "sports",
     thumbnail: "/thumbnails/summa-sports.png",
-  },
-  {
-    name: "Cracks",
-    url: "https://cracksgroup.com/",
-    category: "sports",
-    thumbnail: "/thumbnails/cracks.png",
   },
   {
     name: "El Faro",
