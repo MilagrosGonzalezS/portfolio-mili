@@ -60,6 +60,12 @@ const projects: Project[] = [
     category: "entrepreneur",
     thumbnail: "/thumbnails/beam.png",
   },
+  {
+    name: "AB Arquitectura",
+    url: "https://abarquitectura.com.ar",
+    category: "entrepreneur",
+    thumbnail: "/thumbnails/ab.png",
+  },
   // Sports
   {
     name: "Summa Sports",
@@ -263,6 +269,7 @@ const priorityNames = [
   "Parkline",
   "Pocho y Mori",
   "Delfi y Lucho",
+  "AB Arquitectura",
 ];
 const allProjects = [
   ...priorityNames.map((name) => projects.find((p) => p.name === name)!),
